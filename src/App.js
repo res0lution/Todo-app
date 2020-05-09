@@ -44,7 +44,17 @@ function App() {
     setValues({ ...values, items: filteredItems });
   };
 
-  const handleEdit = (e) => {};
+  const handleEdit = (id) => {
+    const filteredItems = values.items.filter((item) => item.id !== id);
+    const selectedItem = values.items.findIndex((item) => item.id !== id);
+    setValues({
+      ...values,
+      items: filteredItems,
+      item: selectedItem.title,
+      id: id,
+      editItem: true,
+    });
+  };
 
   return (
     <div className="container">
