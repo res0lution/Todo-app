@@ -35,9 +35,14 @@ function App() {
     });
   };
 
-  const clearList = (e) => {};
+  const clearList = () => {
+    setValues({ ...values, items: [] });
+  };
 
-  const handleDelete = (e) => {};
+  const handleDelete = (id) => {
+    const filteredItems = values.items.filter((item) => item.id !== id);
+    setValues({ ...values, items: filteredItems });
+  };
 
   const handleEdit = (e) => {};
 
