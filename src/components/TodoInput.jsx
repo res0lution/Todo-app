@@ -7,7 +7,7 @@ function TodoInput({ item, handleChange, handleSubmit, editItem }) {
         <div className="input-group">
           <div className="input-group-prepend">
             <div className="input-group-text bg-primary text-white">
-              <i class="fas fa-book" aria-hidden="true"></i>
+              <i className="fas fa-book" aria-hidden="true"></i>
             </div>
           </div>
 

@@ -21,7 +21,7 @@ function TodoList({ items, clearList, handleDelete, handleEdit }) {
       <button
         onClick={clearList}
         type="button"
-        className="btn btn-danger text-uppercase mt-5"
+        className="btn btn-danger btn-block text-uppercase mt-5"
       >
         Cleat List
       </button>

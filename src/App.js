@@ -23,7 +23,7 @@ function App() {
     e.preventDefault();
     const newItem = {
       id: values.id,
-      title: values.title,
+      title: values.item,
     };
     const updatedItems = [...values.items, newItem];
     setValues({
