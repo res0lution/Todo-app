@@ -15,9 +15,25 @@ function App() {
     editItem: false,
   });
 
-  const handleChange = (e) => {};
+  const handleChange = (e) => {
+    setValues({ ...values, item: e.target.value });
+  };
 
-  const handleSubmit = (e) => {};
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const newItem = {
+      id: values.id,
+      title: values.title,
+    };
+    const updatedItems = [...values.items, newItem];
+    setValues({
+      ...values,
+      items: updatedItems,
+      item: "",
+      id: uuid(),
+      editItem: false,
+    });
+  };
 
   const clearList = (e) => {};
 
